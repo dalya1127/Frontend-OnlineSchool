@@ -1,0 +1,38 @@
+.main{
+    display: flex;
+    background-color: #231f20;
+    align-items: center;  
+    gap: 20px; 
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+}
+
+.buttonStyle{
+    display: flex;
+    gap: 20px;     
+}
+
+.textPlace{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;    
+    text-transform: uppercase;  
+    color: #878d8f;
+}
+.buttonPlace{
+    color: #8c8c8c;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;  
+    padding-bottom: 8px;
+    cursor: pointer
+    
+}
+.buttonPlace:hover{
+  color: #ffffff;  
+  border-color: #ffffff;
+}
+
+.buttonPlace:active{
+    color:rgb(97, 99, 99)
+}
