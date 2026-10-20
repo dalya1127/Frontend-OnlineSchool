@@ -1,6 +1,6 @@
 .main{
     display: flex;
-    background-color: #231f20;
+    background-color: #7692ab;
     align-items: center;  
     gap: 20px; 
     flex-direction: column;
@@ -18,10 +18,10 @@
     font-size: 20px;
     font-weight: 300;    
     text-transform: uppercase;  
-    color: #878d8f;
+    color: #353535;
 }
 .buttonPlace{
-    color: #8c8c8c;
+    color: #353535;
     text-transform: uppercase; 
     letter-spacing: 1.5px;  
     padding-bottom: 8px;
@@ -29,7 +29,7 @@
     
 }
 .buttonPlace:hover{
-  color: #ffffff;  
+  color: #cdcdcd;
   border-color: #ffffff;
 }
 

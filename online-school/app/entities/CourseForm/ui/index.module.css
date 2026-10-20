@@ -1,0 +1,120 @@
+.main {
+    width: 60vw;
+    min-width: 350px;
+    height: 50vh;
+    min-height: 450px;
+    background-color: rgb(170, 201, 216);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.head, .middle, .foot {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.head { height: 35%; justify-content: center; }
+.middle { 
+    height: 45%; 
+    justify-content: center; 
+    gap: 20px; 
+}
+.foot { height: 20%; justify-content: center; }
+
+
+.textPlace1 { 
+    margin: 0; 
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a2530;
+    font-family: system-ui, sans-serif;
+    letter-spacing: -0.3px;
+    text-align: center;
+}
+
+
+.textPlace2 { 
+    margin: 6px 0 0 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5d6e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+}
+
+
+.descriptionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Минимальный, плотный отступ между строками описания */
+    font-size: 0.95rem;
+    color: #2c3e50;
+    font-family: system-ui, sans-serif;
+    max-width: 90%;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px; /* Отодвигаем весь блок описания вниз от заголовка курса */
+}
+
+.descriptionBox p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center; /* Жестко фиксируем центровку для абзацев */
+}
+
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.oldPrice { 
+    text-decoration: line-through; 
+    color: #555555; 
+    font-size: 0.9rem; 
+}
+
+
+.newPrice { 
+    font-size: 1.7rem; 
+    font-weight: bold; 
+    margin-top: 3px; 
+    color: #000000;
+}
+
+
+.button {
+    background-color: rgb(137, 171, 201);
+    width: 60%;
+    height: 45px; 
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+    color: #000000; 
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: rgb(112, 149, 181);
+}
+
+.downPlace { width: 60%; text-align: center; }
+
+
+.cancel { 
+    color: #000000; 
+    text-decoration: none; 
+    font-size: 0.95rem;
+    cursor: pointer;
+}

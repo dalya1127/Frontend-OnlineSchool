@@ -46,6 +46,11 @@
     width: 60%;
     height: 20%;
     border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(112, 149, 181);
+
 }
 .downPlace{
     width: 60%;
