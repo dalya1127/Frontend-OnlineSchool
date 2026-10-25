@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "habrastorage.org",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "news.mail.ru",
+        pathname: "/**",
+      },
     ],
   },
 };
