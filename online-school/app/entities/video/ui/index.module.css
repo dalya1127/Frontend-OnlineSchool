@@ -1,0 +1,30 @@
+.main{
+    background-color: rgb(203, 203, 203);
+    
+    width: 50%;
+    min-width: 350px;
+    height: 50vh;
+
+    border-radius: 15px;
+
+    padding: 10px;
+
+    transition: all 0.2s ease-in;
+
+    margin: 0 auto;
+}
+.video{
+    width: 95%;
+    height: 90%;
+    margin: 0 auto;
+}
+.namePlace{
+    width: 95%;
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+}
+.name{
+    font-size: 20px;
+    color:black
+}

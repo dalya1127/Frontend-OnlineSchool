@@ -1,0 +1,54 @@
+.main{
+    width: 400px;
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+
+    margin: 10px;
+}
+
+.imagePlace {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textPlace{
+    min-height: 100px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+}
+.text{
+    font-size: 20px;
+    color: black;
+    margin: 0 auto;
+}
+
+.datePlace{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    padding-right: 10px;
+}
+.date{
+    font-size: 18px;
+    color: rgb(61, 61, 61);
+}
