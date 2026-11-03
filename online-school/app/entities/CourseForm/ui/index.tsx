@@ -1,31 +1,44 @@
 'use client'
+import CourseProps from '../model/CourseProps';
 import styles from './index.module.css';
 
-export default function CourseForm() {
+export default function CourseForm(data: CourseProps) {
     return (
         <div className={styles.main}>
-            <div className={styles.head}>
-                <h2 className={styles.textPlace1}>Курс по Frontend разработке</h2>
-                <p className={styles.textPlace2}>Оформление подписки на курс</p>
-                <div className={styles.descriptionBox}>
-                    <p>40 часов практики и созвоны с ментором</p>
-                    <p>Доступ к закрытому чату навсегда</p>
+            <div className={styles.top}>
+                <div className={styles.placeIcon}>
+                    <span className={styles.level}>{`${data.CountLessonCompleted} из ${data.CountLessonAll}`}</span>
+                    <span className={styles.level}>{data.IsPurchased ? 'Приобретен' : 'Не приобретен'}</span>
                 </div>
             </div>
-
-            <div className={styles.middle}>
-                <div className={styles.priceContainer}>
-                    <span className={styles.oldPrice}>7 500 ₽</span>
-                    <span className={styles.newPrice}>4 900 ₽</span>
-                </div>       
-                <button type="button" className={styles.button}>Купить курс</button>
+            <div className={styles.medium}>
+                <h3 className={styles.name}>{data.Name}</h3>
+                <p className={styles.description}>{data.Description}</p>
+                { data.IsPurchased ?
+                    <>
+                        <div className={styles.placeProgress}>
+                            <p className={styles.progressText}>Ваш прогресс</p>
+                            <p className={styles.progressPrecent}>{`${data.Progress ?? 0}%`}</p>
+                        </div>
+                        <div className={styles.progress}>
+                            <div className={styles.progress__bar} style={{"width":`${data.Progress ?? 0}%`}}>
+                            </div>
+                        </div>
+                    </>
+                    :
+                    <div className={styles.placeCountLesson}>
+                        <p className={styles.countLessonText}>{`Количество уроков: ${data.CountLessonAll}`}</p>
+                    </div>
+                }
+                <div className={styles.divider}></div>
             </div>
 
-            <div className={styles.foot}>
-                <div className={styles.downPlace}>
-                    <a href="#" className={styles.cancel}><u>Вернуться назад</u></a>
-                </div>
+            <div className={styles.bottom}>
+                <button className={styles.button}>
+                    {data.IsPurchased ? "Продолжить" : "Купить"}
+                    </button>
             </div>
         </div>
     )
 }
+
