@@ -4,10 +4,11 @@ import Header from "../entities/Header/ui"
 import Footer from "../entities/Footer/ui"
 
 
+
 export default function Authorization(){
     return(
         <div className={styles.main}>
-        <Header></Header>
+        <Header isRenderMenu={false}></Header>
         <AuthorizationForm></AuthorizationForm>
         <Footer></Footer>
         </div>
