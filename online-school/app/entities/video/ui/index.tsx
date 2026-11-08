@@ -9,6 +9,8 @@ export default function VideoPlayer(data : VideoProps) {
         <div className={styles.namePlace}>
             <p className={styles.name}>{data.Name}</p>
         </div>
+                <div className={styles.divider}></div>
+
       <video
         controls
         preload="metadata"

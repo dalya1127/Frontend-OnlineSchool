@@ -3,4 +3,5 @@ export default interface NewsProps {
     Text: string,
     LinkImage: string,
     Date: string,
+    isReaded?: boolean
 };
