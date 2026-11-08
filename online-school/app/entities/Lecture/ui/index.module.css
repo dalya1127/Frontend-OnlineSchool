@@ -1,94 +1,111 @@
-.main{
-    background-color: rgba(94, 152, 190, 0.526);
-    width: 60vw;
-    min-height: 40vw; 
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    font-family: sans-serif;
-    color: #1a2530;
+.main {
+  background: #ffffff;
+  border: 1px solid #dfe4ed;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 24px 0;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(28, 39, 73, 0.02);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #172033;
+  box-sizing: border-box;
+}
 
-    box-sizing: border-box; 
-    backdrop-filter: blur(4px);
-}
 .title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #0f2537;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-    padding-bottom: 10px;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 24px 0;
+  color: #172033;
+  padding-left: 14px;
+  border-left: 4px solid #5b5ce2;
+  border-bottom: none;
+  padding-bottom: 0;
 }
+
 .textContainer {
-    font-size: 1.15rem; 
-    line-height: 1.6;  
-    margin: 0 0 30px 0;
-    color: #11202c; 
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  color: #454f63;
 }
+
 .imageContainer {
-    margin: 30px 0;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
+  margin: 32px 0;
+  padding: 24px;
+  border: 1px solid rgba(91, 92, 226, 0.15);
+  border-radius: 12px;
+  background-color: #fbfcfe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
 .caption {
-    margin-top: 15px;
-    font-size: 1.1rem;    
-    color: #0f1c26;         
-    font-weight: 500;
-    text-align: center;
-}
-.image{
-    max-width: 100%;
-    height: auto;
-    mix-blend-mode: multiply; 
+  margin-top: 16px;
+  font-size: 13px;
+  color: #758096;
+  font-weight: 600;
+  text-align: center;
 }
 
 .attachments {
-    margin-top: 40px;
-    padding-top: 25px;
-    border-top: 2px solid rgba(255, 255, 255, 0.2); 
-}
-.fileGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 16px;
-}
-.fileCard {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.25s ease;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e7ebf2;
 }
 
+.attachmentsTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #172033;
+  margin: 0 0 16px 0;
+}
+
+.fileGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fileCard {
+  display: flex;
+  align-items: center;
+  background-color: rgba(91, 92, 226, 0.06);
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(91, 92, 226, 0.12);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
 
 .fileCard:hover {
-    background-color: rgba(255, 255, 255, 0.85); 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  background-color: rgba(91, 92, 226, 0.12);
+  border-color: #5b5ce2;
 }
 
 .fileDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    overflow: hidden; /* Защита от вылезания длинных названий */
+  display: flex;
+  flex-direction: column;
 }
+
 .fileLink {
-    color: #003e7a;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}.fileLink:hover {
-    text-decoration: underline; /* Подчёркивание при наведении на сам текст */
+  color: #4849c8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.fileLink:hover {
+  text-decoration: underline;
+  color: #5b5ce2;
+}
+
+.fileIcon {
+  display: none;
 }
