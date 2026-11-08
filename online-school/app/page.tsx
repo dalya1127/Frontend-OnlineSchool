@@ -61,7 +61,7 @@ export default function Home() {
             <News Date="18.10.2026" Text="Скоро откроется сайт для обучения от Далера и Альберта!" Id={1} LinkImage="https://habrastorage.org" />
             <VideoPlayer
                 Id={1}
-                Name="Тестовое название видео"
+                Name="Урок №1"
                 LinkPic="https://gstatic.com"
                 LinkVideo="blob:https://vkvideo.ru"
             >
