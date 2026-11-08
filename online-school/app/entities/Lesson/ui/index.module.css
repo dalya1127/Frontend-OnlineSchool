@@ -1,22 +1,21 @@
-
 .lessonsWidget {
-  background-color: #a6bed7; 
-  border-radius: 14px;      
-  padding: 24px;            
+  background: #ffffff;
+  border: 1px solid #dfe4ed;
+  border-radius: 16px;
+  padding: 28px 32px;
   width: 100%;
-  max-width: 580px;          
-  margin-top: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+  max-width: 1000px;
+  margin: 24px auto;
+  box-shadow: 0 4px 24px rgba(28, 39, 73, 0.02);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
-
 
 .widgetTitle {
-  font-family: sans-serif;
   font-size: 20px;
-  color: #2c3e50;
-  margin: 0 0 16px 0;       
+  font-weight: 700;
+  color: #172033;
+  margin: 0 0 24px 0;
 }
-
 
 .lessonsSection {
   display: flex;
@@ -25,38 +24,34 @@
   width: 100%;
 }
 
-
 .lessonCard {
-  background-color: #d1e2f1;  
-  border-radius: 10px;
+  background-color: #fbfcfe;  
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
   padding: 16px 20px;
-  border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-
-.lessonCardActive {
-  background-color: #8faec9;  
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 .lessonCard:hover {
-  background-color: #8faec9;
+  background-color: #ffffff;
+  border-color: #5b5ce2;
 }
 
 .lessonInfo {
   display: flex;
-  gap: 8px;
-  font-family: sans-serif;
-  font-size: 16px;
-  color: #2c3e50;
+  align-items: center;
+  gap: 12px;
 }
 
 .lessonNum {
-  font-weight: bold;
-  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  color: #172033;
 }
 
 .lessonName {
-  font-weight: normal;
+  font-size: 14px;
+  font-weight: 500;
+  color: #454f63;
 }

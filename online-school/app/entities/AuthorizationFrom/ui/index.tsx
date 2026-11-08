@@ -1,30 +1,64 @@
 'use client'
+import { useState } from 'react';
 import styles from './index.module.css';
-import logo from './../../../../public/logo.png';
-import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AuthorizationForm() {
+    const [showPassword, setShowPassword] = useState(false);
+
     return (
         <div className={styles.main}>
             <div className={styles.head}>
-                <Image src={logo} alt="Онлайн Школа" className={styles.image} />
+                <div className={styles.logo}>
+                    онлайн-школа<span className={styles.logoDot}>.</span>
+                </div>
                 <p>Авторизация</p>
             </div>
+
             <div className={styles.middle}>
-                <input type='text' placeholder='login or email' className={styles.emailPlace}></input>
-                <input type='text' placeholder='password' className={styles.passwordPlace}></input>
-                <button className={styles.button}>Войти</button>
-            </div>
-            <div className={styles.foot}>
-                <div className={styles.downPlace}>
-                    <a href='' className={styles.linkUpdatePassword}><u>Не помню пароль</u>
-                    </a>
-                    <div className={styles.registrationPlace}>
-                        <p className={styles.downSpace}>Нет профиля?</p>
-                        <a href=''><u>Зарегистрируйтесь</u></a>
-                    </div>
+                <input type='text' placeholder='Логин или email' className={styles.emailPlace} />
+
+                <div className={styles.passwordWrapper}>
+                    <input
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder='Пароль'
+                        className={styles.passwordPlace}
+                    />
+                    <button
+                        type="button"
+                        className={styles.eyeButton}
+                        onClick={() => setShowPassword(!showPassword)}
+                        aria-label={showPassword ? "Скрыть пароль" : "Показать пароль"}
+                    >
+                        {showPassword ? (
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        ) : (
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                <line x1="1" y1="1" x2="23" y2="23"></line>
+                            </svg>
+                        )}
+                    </button>
                 </div>
 
+                <button className={styles.button}>Войти</button>
+            </div>
+
+            <div className={styles.foot}>
+                <div className={styles.downPlace}>
+                    <Link href="/reset" className={styles.linkUpdatePassword}>
+                        Не помню пароль
+                    </Link>
+                    <div className={styles.registrationPlace}>
+                        <p className={styles.downSpace}>Нет профиля?</p>
+                        <Link href="/register" className={styles.regLink}>
+                            Зарегистрируйтесь
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     )
