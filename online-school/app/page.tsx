@@ -6,29 +6,32 @@ import Lesson from "./entities/Lesson/ui";
 import Comment from "./entities/comment/ui";
 import News from "./entities/news/ui";
 import VideoPlayer from "./entities/video/ui";
-import Footer from "./entities/Footer/ui";
-import Homework from "./entities/Homework/ui";
+import CourseProps from "./entities/CourseForm/model/CourseProps";
 
-const mockComments = [
-    {
-        Id: 1,
-        IdUser: 1,
-        IdLessons: 1,
-        Date: "03.11.2026",
-        Text: "Первый коммент",
-        Comments: [
-            {
-                Id: 2,
-                IdUser: 2,
-                IdLessons: 1,
-                Date: "03.11.2026",
-                Text: "Ответ на первый коммент",
-                Comments: []
-            }
-        ]
-    }
-];
-
+const testCourse1 : CourseProps = {
+  Name: 'Разработка Бекенд приложений',
+  Description: 'Используя современное решение - платформу ASP.NET, вы сможете реализовать полноценное высоконагруженное API!',
+  IsPurchased: true,
+  CountLessonAll: 15,
+  Progress: 75,
+  CountLessonCompleted: 5
+}
+const testCourse2 : CourseProps = {
+  Name: 'Разработка Фронтенд приложений',
+  Description: 'Внешний вид - решает все! Реализуйте современное решение для веба!',
+  IsPurchased: true,
+  CountLessonAll: 10,
+  Progress: 51,
+  CountLessonCompleted: 1
+}
+const testCourse3 : CourseProps = {
+  Name: 'Разработка баз данных',
+  Description: 'Хранение информации - ключ к достижению скорости работы! Научись использовать эту катану в мире IT!',
+  IsPurchased: false,
+  CountLessonAll: 15,
+  Progress: 0,
+  CountLessonCompleted: 0
+}
 export default function Home() {
     return (
         <>
