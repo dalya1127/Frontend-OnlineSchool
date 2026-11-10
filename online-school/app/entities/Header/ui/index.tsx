@@ -9,10 +9,10 @@ export default function Header(data: HeaderProps) {
                 <h1 className={styles.textPlace}>онлайн-школа</h1>
                 
                 {data.isRenderMenu==true ? <nav className={styles.buttonStyle}>
-                    <p className={styles.buttonPlace}>Главная</p>
-                    <p className={styles.buttonPlace}>Курсы</p>
-                    <p className={styles.buttonPlace}>Личный кабинет</p>
-                    <p className={styles.buttonPlace}>Домашнее задание</p>
+                    <p className={styles.buttonPlace} onClick={() => data.handlerClick(1)}>Главная</p>
+                    <p className={styles.buttonPlace} onClick={() => data.handlerClick(2)}>Курсы</p>
+                    <p className={styles.buttonPlace} onClick={() => data.handlerClick(3)}>Личный кабинет</p>
+                    <p className={styles.buttonPlace} onClick={() => data.handlerClick(4)}>Домашнее задание</p>
                 </nav>:<></>}
         </header>
     )

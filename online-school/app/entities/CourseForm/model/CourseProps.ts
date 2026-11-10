@@ -1,4 +1,5 @@
 export default interface CourseProps{
+    Id: number,
     Name: string,
     Description: string,
     LincPic?: string,
