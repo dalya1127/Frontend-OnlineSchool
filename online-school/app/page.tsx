@@ -11,31 +11,6 @@ import Homework from "./entities/Homework/ui";
 import CommentProps from "./entities/comment/model/CommentProps";
 
 
-const testCourse1: CourseProps = {
-    Name: 'Разработка Бекенд приложений',
-    Description: 'Используя современное решение - платформу ASP.NET, вы сможете реализовать полноценное высоконагруженное API!',
-    IsPurchased: true,
-    CountLessonAll: 15,
-    Progress: 75,
-    CountLessonCompleted: 5
-}
-const testCourse2: CourseProps = {
-    Name: 'Разработка Фронтенд приложений',
-    Description: 'Внешний вид - решает все! Реализуйте современное решение для веба!',
-    IsPurchased: true,
-    CountLessonAll: 10,
-    Progress: 51,
-    CountLessonCompleted: 1
-}
-const testCourse3: CourseProps = {
-    Name: 'Разработка баз данных',
-    Description: 'Хранение информации - ключ к достижению скорости работы! Научись использовать эту катану в мире IT!',
-    IsPurchased: false,
-    CountLessonAll: 15,
-    Progress: 0,
-    CountLessonCompleted: 0
-}
-
 const mockComments: CommentProps[] = [
     {
         Id: 1,
@@ -71,6 +46,7 @@ export default function Home() {
         <>
             <AuthorizationForm></AuthorizationForm>
             <CourseForm
+                Id = {1}
                 Name="Курс 1"
                 Description="новый курс"
                 IsPurchased={true}
